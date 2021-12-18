@@ -1,0 +1,194 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 align="center">Registration Page</h2>
+    
+      <form [formGroup]="bFormGroup" (ngSubmit)="onSubmit()">
+      <div class="container">
+        <label class="text-white" for="input-group"><h5>Title</h5></label>
+        
+        <input type="text" placeholder="Enter text" formControlName="title">
+        
+  
+        <label class="text-white" for="input-group"><h5>First Name</h5></label>
+        <input type="text" placeholder="Enter firstname" formControlName="firstName">
+        <div class="err" *ngIf="bFormGroup.get('firstName').errors && bFormGroup.get('firstName').touched"> 
+          <div style="color: red;" *ngIf="bFormGroup.get('firstName').errors.required">
+              First name is required
+          </div>
+          </div>
+
+
+        
+  
+        <label class="text-white" for="input-group"><h5>Last Name</h5></label>
+        <input type="text" placeholder="Enter lastname" formControlName="lastName">
+        <div class="err" *ngIf="bFormGroup.get('lastName').errors && bFormGroup.get('lastName').touched"> 
+          <div style="color: red;" *ngIf="bFormGroup.get('lastName').errors.required">
+             Last name is required
+          </div>
+          </div>
+       
+  
+        <label class="text-white" for="input-group"><h5>Email</h5></label>
+        <input type="email" placeholder="Enter email" name="email" formControlName="email">
+        <div class="err" *ngIf="bFormGroup.get('email').errors && bFormGroup.get('email').touched">
+          <div style="color: red;" *ngIf="bFormGroup.get('email').errors.required" >
+              email is required
+          </div> 
+      </div>
+          <div class="alert alert-danger" style="color: red;" *ngIf="bFormGroup.get('email').invalid && submitted">
+        Please enter a valid email
+
+      </div> 
+
+     
+        
+  
+        <label class="text-white" for="input-group"><h5>Password</h5></label>
+        <input type="password" placeholder="Enter password" id="password" formControlName="password">
+        
+        <div class="err" *ngIf="bFormGroup.get('password').errors && bFormGroup.get('password').touched"> 
+          <div style="color: red;" *ngIf="bFormGroup.get('password').errors.required">
+              password is required
+          </div>
+          <div style="color: red;" *ngIf="bFormGroup.get('password').errors.minlength">
+              password at least 8 character
+          </div>
+          </div>
+
+
+
+       
+  
+        <label class="text-white" for="input-group"><h5>Confirm password</h5></label>
+        <input type="password" placeholder="confirm password" formControlName="confermPass"><br><br>
+        <div class="err" *ngIf="bFormGroup.get('confermPass').errors && bFormGroup.get('confermPass').touched">
+          <div style="color: red;" *ngIf="bFormGroup.get('confermPass').errors.required">
+              password is required
+          </div> 
+          <div *ngIf="bFormGroup.get('confermPass').errors.MustMatch()">
+              Password and Confirm Password must be match.</div>
+          </div>
+
+
+      
+       <div class="field-wrap">
+        <label for="Dob" class="text-white" for="input-group"><h5>Date of Birth</h5></label>
+        <input type="date" name="DoB" id="DoB">
+        </div>
+        
+        <div class="field-wrap">
+       
+        <label for="phoneNumber1" class="text-white" for="input-group"><h5>Phone No</h5></label>
+        <input type="number"  placeholder="Enter phone number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"> 
+        
+      </div>
+
+        <div class="vertical-center">
+          
+         
+         <button type="submit" routerLink="/loginpage" [disabled]="bFormGroup.invalid">Submit</button>&nbsp;&nbsp;
+  
+       
+        </div>
+  
+  
+      </div>
+  
+    </form>
+</body>
+</html> -->
+
+<body>
+<div class="row">
+  <div class="col-md-4 offset-4">
+    <h3>Signup</h3>
+    <form [formGroup]="bFormGroup">
+
+      <div class="form-group">
+        <label class="text-white" for="title"><strong>Title</strong><span class="text-danger">*</span></label>
+        <input type="text" class="form-control" name="title" id="title" formControlName="title">
+        <div class=" alert alert-danger" *ngIf="bFormGroup.controls.title.dirty && bFormGroup.controls.title.invalid">
+          <div *ngIf="bFormGroup.controls.title.errors.required">Field Required</div>
+        
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="text-white" for="firstName">First Name<sup class="text-danger">*</sup></label>
+        <input type="text" class="form-control" name="firstName" id="firstName" formControlName="firstName">
+        <div class=" alert alert-danger" *ngIf="bFormGroup.controls.firstName.dirty && bFormGroup.controls.firstName.invalid">
+          <div *ngIf="bFormGroup.controls.firstName.errors.required">Field Required</div>
+          
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="text-white" for="lastName">Last Name<sup class="text-danger">*</sup></label>
+        <input type="text" class="form-control" name="lastName" id="title" formControlName="lastName">
+        <div class=" alert alert-danger" *ngIf="bFormGroup.controls.lastName.dirty && bFormGroup.controls.lastName.invalid">
+          <div *ngIf="bFormGroup.controls.lastName.errors.required">Field Required</div>
+          
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="text-white" for="email">Email<span class="text-danger">*</span></label>
+        <input type="email" class="form-control" name="email" id="email" formControlName="email">
+        <div class=" alert alert-danger" *ngIf="bFormGroup.controls.email.dirty && bFormGroup.controls.email.invalid">
+          <div *ngIf="bFormGroup.controls.email.errors.required">Field Required</div>
+          <div *ngIf="bFormGroup.controls.email.errors.email">Email Pattern is Wrong</div>
+          
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="text-white" for="password">Password<span class="text-danger">*</span></label>
+        <input type="password" class="form-control" name="password" id="password" formControlName="password" [(ngModel)]="pass">
+        <div class=" alert-danger" *ngIf="bFormGroup.controls.password.dirty && bFormGroup.controls.password.invalid">
+          <div *ngIf="bFormGroup.controls.password.errors.required">Field Required</div>
+          <div *ngIf="bFormGroup.controls.password.errors.passError">
+            {{bFormGroup.controls.password.errors.passError.message}}
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <label class="text-white" for="confermPass">Confirm Password<span class="text-danger">*</span></label>
+        <input type="password" class="form-control" name="confermPass" id="confermPass" formControlName="confermPass" [(ngModel)]="confirm">
+        <div *ngIf="bFormGroup.controls.confermPass.dirty && bFormGroup.controls.confermPass.invalid" class="alert-danger">
+          <div *ngIf="bFormGroup.controls.confermPass.errors.required">Password is required.</div>
+          <div *ngIf="bFormGroup.controls.confermPass.errors.confirmedValidator">Password and Confirm Password must be match.</div>
+      </div>
+      </div>
+
+      
+      <div class="form-group">
+        <label class="text-white" for="dob">Date of Birth</label>
+        <input type="date" class="form-control" name="dob" id="dob">
+      </div>
+
+
+      <div class="form-group">
+        <label class="text-white" for="phoneNumber">Phone<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" formControlName="phoneNumber">
+        <div class=" alert-danger" *ngIf="bFormGroup.controls.phoneNumber.dirty && bFormGroup.controls.phoneNumber.invalid">
+          <div *ngIf="bFormGroup.controls.phoneNumber.errors.required">Field Required</div>
+          <div *ngIf="bFormGroup.controls.phoneNumber.errors.pattern">Should Contain 10 digits</div>
+        </div>
+      </div>
+
+      <button type="submit"  [disabled]="bFormGroup.invalid" class="btn btn-primary" routerLink='/loginpage'>Submit</button>
+    </form>
+  </div>
+</div>
+</body>

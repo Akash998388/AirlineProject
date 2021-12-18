@@ -1,0 +1,55 @@
+<!-- <p>admin works!</p> -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Airline Reservation</title>
+  </head>
+
+  <body>
+    <h1>Admin</h1>
+    <div class="text-white">
+      
+      <a style="text-align:center"><b>Add Flight</b>  - Admin can add new flight(s)</a><br><br> 
+    </div>
+    
+    <form action="action_page.php">
+      <div class="container">
+        <div class="booking-form-box">
+          <label class="text-white" for="text"><b>Flight Id </b></label>
+          <input type="text"  id="input-group" placeholder="Enter Flight Id" name="text" required>
+          
+          <label class="text-white" for="text"><b>Source</b></label>
+          <input type="text" id="input-group" placeholder="Source" name="text" required> <br>
+
+          
+          <label class="text-white" for="text"><b>Destination</b></label>
+          <input type="text"  id="input-group" placeholder="Destination" name="text" required>
+          
+          <label class="text-white" for="text"><b>Departure &nbsp;</b></label>
+          <input type="text"  id="input-group" placeholder="Departure" name="text" required><br>
+
+          
+          <label class="text-white" for="text"><b>Arrival &nbsp;</b></label>
+          <input type="text"  id="input-group" placeholder="Arrival" name="text" required>
+
+          
+          <label class="text-white" for="text"><b>Duration &nbsp;</b></label>
+          <input type="text"  id="input-group" placeholder="Duration" name="text" required>
+
+          
+          <label class="text-white" for="text"><b>Cabin</b></label>
+          <input type="text"  id="input-group" placeholder="Cabin" name="text" required>
+         <button type="button" class="btn btn-success btn-lg btn-block">Add Flight</button>
+         <!-- <button type="button" class="btn btn-danger btn-lg btn-block">Delete Flight</button> -->
+         <button type="button" class="btn btn-danger btn-lg btn-block" routerLink="/deleteflight">Delete Flight</button>
+         
+
+        </div>
+      </div>
+    </form>
+  </body>
+  <!-- <footer class="fo">
+    <div>LTI @2022 AKKM On-The-Go</div>
+  
+  </footer> -->
+</html>

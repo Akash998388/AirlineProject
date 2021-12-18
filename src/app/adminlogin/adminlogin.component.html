@@ -1,0 +1,124 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+  
+  
+
+    <form [formGroup]="cFormGroup" (ngSubmit)="onSubmit()">
+        <h2 style="text-align: center;">Admin login</h2>
+        <ul align="center">
+         
+          <br/><br/>
+        
+          <div class="container">
+            <label for="email"><h5>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5></label>
+            <input type="email" placeholder="email" name="email" formControlName="email"><br><br>
+
+            <div class="err" *ngIf="cFormGroup.get('email').errors &&  cFormGroup.get('email').touched">
+              <div style="color: red;" *ngIf="cFormGroup.get('email').errors.required" >
+                  email is required
+              </div> 
+          </div>
+              <div class="alert alert-danger" style="color: red;" *ngIf="cFormGroup.get('email').invalid && submitted">
+            Please enter a valid email
+   
+          </div> 
+
+
+          
+           
+
+           
+
+
+
+            <label for="password"><h5>Password &nbsp;</h5></label>
+            <input type="password" placeholder="Enter Password" id="password" formControlName="password">
+            <div class="err" *ngIf="cFormGroup.get('password').errors && cFormGroup.get('password').touched"> 
+              <div style="color: red;" *ngIf="cFormGroup.get('password').errors.required">
+                  password is required
+              </div>
+              <div style="color: red;" *ngIf="cFormGroup.get('password').errors.minlength">
+                  password at least 8 character
+              </div>
+              </div>
+
+
+           
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="btn">
+          <button type="submit" [disabled]="cFormGroup.invalid" routerLink="/admin">Login</button>&nbsp;
+         
+        
+           &nbsp; <button routerLink="/signup">Signup</button>
+        </div>
+          
+          <span class="psw">Forgot<a href="#">Password?</a></span>
+        </ul>
+      
+    </form>
+    
+</body>
+</html> -->
+
+
+
+<!-- <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">email</th>
+      <th scope="col">password</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of us">
+      <th scope="row">{{item.email}}</th>
+      <td>{{item.password}}</td>
+     
+      
+    </tr>
+    
+  </tbody>
+</table> -->
+
+
+<div class="row">
+  <div class="col-md-4 offset-4">
+    <h3>Admin Login</h3>
+    <form [formGroup]="cFormGroup" class="form" (ngSubmit)="onSubmit">
+      <div class="form-group">
+        <label for="email">Email<span class="text-danger">*</span></label>
+        <input type="email" id="email" name="email" formControlName="email" class="form-control">
+        <div class=" alert alert-danger" *ngIf="cFormGroup.controls.email.dirty && cFormGroup.controls.email.invalid">
+          <div *ngIf="cFormGroup.controls.email.errors.required">Field Required</div>
+          <div *ngIf="cFormGroup.controls.email.errors.email">Email Pattern is Wrong</div>
+        </div>
+ </div>
+ 
+ 
+      <div class="form-group">
+        <label for="password">Password<span class="text-danger">*</span></label>
+      <input type="password" class="form-control" id="password" formControlName="password" name="password">
+      <div class=" alert-danger" *ngIf="cFormGroup.controls.password.dirty && cFormGroup.controls.password.invalid">
+        <div *ngIf="cFormGroup.controls.password.errors.required">Field Required</div>
+        <div *ngIf="cFormGroup.controls.password.errors.passError">
+          {{cFormGroup.controls.password.errors.passError.message}}
+        </div>
+      </div>
+       </div>
+       <span class="text-danger">* marked fields are mandatory</span>
+       <br/>
+       <button type="submit" class="btn btn-primary" [disabled]="cFormGroup.invalid" routerLink="/admin">Login</button>
+       <br/><br/>
+       <button type="submit" class="btn btn-primary" routerLink="/signup">Signup</button>
+    </form>
+  </div>
+ </div>

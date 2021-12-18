@@ -1,0 +1,59 @@
+<!-- <p>flightstatus works!</p> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Flight Status</h1>
+    <div class="container">
+    <div id="input3">
+        <span id="input-group" class="text-primary"><b>Search by:</b></span>
+        
+        <input type="radio" id="input-group" name="r">
+        <label class="text-black" for="input-group"><b>Route</b></label>
+        
+        <input type="radio" id="input-group" name="r">
+        <label class="text-black" for="input-group"><b>Flight id</b></label>
+        
+        <!-- <div id="input">
+
+            <label for="text"><b>From &nbsp;</b></label><br><br>
+            <input type="text" id="input-group" placeholder="Airport code or city, state">
+
+            <label for="text"><b>To &nbsp;</b></label>
+            <input type="text" id="input-group" placeholder="Airport code or city, state">
+        </div> -->
+
+
+        <div class="form-group">
+            <label for="from" class="col-sm-3 control-label"><b>From </b></label>
+            <div class="col-sm-9">
+                <input type="from" id="from" placeholder="Airport code or city, state" class="form-control" name= "from">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="to" class="col-sm-3 control-label"><b>To </b></label>
+            <div class="col-sm-9">
+                <input type="to" id="to" placeholder="Airport code or city, state" class="form-control" name= "to">
+            </div>
+        </div>
+
+
+        
+        <div class="form-group">
+            <label for="flightType" class="col-sm-3 control-label"><b>FlightType</b></label>
+            <div class="col-sm-9">
+                <input type="flightType" id="flightType" placeholder="Enter flight" class="form-control" name= "flightType">
+                
+            </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button type="Search" class="btn btn-info"><b>Track flight</b></button>
+        
+      </div>
+    </div>
+</body>
+</html>

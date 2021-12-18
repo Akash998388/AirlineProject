@@ -1,0 +1,118 @@
+  body{
+    /* background-image: url(airplane.JPG); */
+    background-image: url(AKMK.JPEG);
+    background-size:cover;
+} 
+ #form{
+    background-color: #000;
+    height: 500px;
+    width: 700px;
+    text-align:center;
+    margin: auto;
+    padding: 20px;
+    opacity: 0.6;
+ }  
+
+    /* #form h3{
+    border-bottom: 2px solid #3399ff;
+    width: 210px;
+    padding: 5px;
+} */
+/* .main{
+    padding: 10px;
+} */
+/* .btn{
+    float: right;
+    padding: 12px;
+    margin: 5px;
+    background-color: darkgray;
+} */
+::placeholder{
+    color: #fff;
+}
+#input #input-group{
+    width: 300px;
+    margin: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    
+}
+#input2 #input-group{
+    width: 195px;
+    margin: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+ ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+
+    border: 1px solid #dedede;
+    border-radius: 4px;
+
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+    color: #888;
+    display: block;
+    
+    background-color:dodgerblue;
+    border-style: ridge;
+}
+li a{
+    
+    color:white;
+    text-align: center; 
+    padding: 5px;
+    margin-top: 5px;
+    text-decoration: none;
+    float: right;
+}
+.fo{
+    background-color:#0066b2;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+    
+}
+#input3 #input-group{
+    margin-left: 50px;
+}
+#input4 #input-group
+{
+    width: 300px;
+    margin: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+} 
+#input4 #input-group1
+{
+    width: 615px;
+    margin: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+button{
+  
+    position:absolute;
+   
+    bottom: 15%;
+    
+}

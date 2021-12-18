@@ -1,0 +1,34 @@
+
+
+h1{
+    text-align: center;
+}
+
+ul{
+    /* list-style-type: none;
+    margin:0;
+    padding:0;
+    background-color:black;
+    overflow: hidden; */
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    background-image: linear-gradient(to bottom, #051322, #15457c);
+    
+    overflow: hidden; 
+}
+
+li a{
+    float:left;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px;
+    margin:16px;
+}
+
+li a:hover{
+    background-color: orange;
+    color: black;
+}
+

@@ -1,0 +1,26 @@
+body{
+    background-image: url(airplane.JPG);
+    background-size:cover;
+} 
+
+#input3 #input-group{
+    margin-left: 50px;
+}
+
+.form-group{
+    
+    margin-left: 50px;
+    
+}
+
+.container{
+    
+    height: 500px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px black solid;
+    margin-top: 50px;
+    padding: 20px;
+}

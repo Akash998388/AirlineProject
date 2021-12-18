@@ -1,0 +1,152 @@
+body {
+    font-size: 12px;
+    /* background-image: url(airplane.JPG);
+    background-size:cover; */
+  }
+  
+  h1 {
+
+    background-color: #fff;
+    width: 250px;
+    padding: 25px;
+    margin: 25px auto 0;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+
+    color: rgb(45, 17, 201);
+    font: 30px Arial, sans-serif;
+    text-shadow: 0px 1px rgb(80, 165, 221);
+    text-align: center;
+    
+    padding-top: 40px;
+    background-color: rgb(205, 208, 214);
+  }
+  
+  input[type=checkbox] {
+    visibility: hidden;
+  }
+  
+  .containerbus {
+    background-color: #fff;
+    width: 250px;
+    padding: 25px;
+    margin: 25px auto 0;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .autobus {
+    background: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 120px;
+    height: 200px;
+  }
+  
+  .fila {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .seccion {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+  }
+  
+  .asiento {
+    width: 21px;
+    height: 21px;
+    color: white;
+    font-size: 10;
+    text-align: center;
+    background: #fcfff4;
+    background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    margin: 5px auto;
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+    position: relative;
+  }
+  
+  .asiento label {
+    cursor: pointer;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 3px;
+    top: 3px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 1);
+    background: linear-gradient(top, #222 0%, #45484d 100%);
+  }
+  /* footer{
+    background-color:white;
+    padding-top: px;
+    padding-bottom: 180px;
+  } */
+  .button1 {
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: #4762fa;
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+    font-size: 100%;
+    height: 44px;
+    line-height: 1.15;
+  
+    margin: 12px 0 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s,box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 10%;
+    
+  }
+  
+  .button1:disabled {
+    cursor: default;
+  }
+  
+  .button1:focus {
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+  }
+
+.button {
+    position: absolute;
+    top: 50%;
+    
+}
+  .asiento label:after {
+    filter: alpha(opacity=0);
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #00bf00;
+    background: linear-gradient(top, #0895d3 0%, #0966a8 100%);
+    top: 0px;
+    left: 0px;
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  .asiento label:hover::after {
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+  }
+  
+  .asiento input[type=checkbox]:checked + label:after {
+    filter: alpha(opacity=100);
+    opacity: 1;
+  }
